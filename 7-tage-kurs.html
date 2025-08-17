@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚫📱 Handysucht in 7 Tagen besiegen | Goodbye Handy</title>
+    
+    <!-- SEO & Social Media Meta Tags -->
+    <meta name="description" content="Verschwendest du 3-4h täglich am Handy? Mit dem bewährten 7-Tage-System gewinnst du deine Lebenszeit zurück. Für nur 49€ statt 99€!">
+    <meta name="keywords" content="Handysucht, Smartphone Sucht, Digital Detox, Bildschirmzeit reduzieren, Handy Entzug">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.goodbyehandy.de/handysucht-in-7-tagen-ueberwinden">
+    <meta property="og:title" content="🚫📱 Handysucht in 7 Tagen besiegen - Spare 1.000h pro Jahr!">
+    <meta property="og:description" content="3-4h täglich am Handy = 1.000h verlorene Lebenszeit pro Jahr! Gewinne mit dem bewährten 7-Tage-System deine Kontrolle zurück. Jetzt 50% Rabatt!">
+    <meta property="og:image" content="https://www.goodbyehandy.de/images/social-hero-1200x630.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="🚫📱 Handysucht in 7 Tagen besiegen">
+    <meta property="twitter:description" content="Verschwendest du 3-4h täglich am Handy? Gewinne deine Lebenszeit zurück!">
+    <meta property="twitter:image" content="https://www.goodbyehandy.de/images/social-hero-1200x630.jpg">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0f0f0f;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Logo Styles */
+        .logo {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: auto;
+            z-index: 10;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover {
+            opacity: 1;
+            transform: translateX(-50%) scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                width: 150px;
+                top: 20px;
+            }
+        }
+        
+        /* Hero Section angepasst für Logo-Platz */
+        .hero {
+            padding-top: 120px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding-top: 100px;
+            }
+        }
+        
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, #1a1a2e, #16213e, #0f3460);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .warning-badge {
+            background: linear-gradient(45deg, #ff4757, #ff3838);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            display: inline-block;
+            animation: pulse 2s infinite;
+            box-shadow: 0 4px 20px rgba(255, 71, 87, 0.3);
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientText 3s ease infinite;
+            line-height: 1.1;
+        }
+        
+        @keyframes gradientText {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .hero .subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 20px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .time-waste {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .time-counter {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #ff4757;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .cta-section {
+            margin: 50px 0;
+        }
+        
+        .price-container {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 40px;
+            margin: 30px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .price-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
+        }
+        
+        .price-old {
+            font-size: 1.5rem;
+            text-decoration: line-through;
+            opacity: 0.6;
+            margin-right: 20px;
+        }
+        
+        .price-new {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #4ecdc4;
+            margin-right: 10px;
+        }
+        
+        .savings {
+            background: #27ae60;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-left: 10px;
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #ff6b6b, #ff4757);
+            color: white;
+            padding: 25px 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 15px 35px rgba(255, 107, 107, 0.4);
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 107, 107, 0.5);
+        }
+        
+        /* Features Grid */
+        .features {
+            padding: 80px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            font-size: 4rem;
+            color: #4ecdc4;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-family: serif;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #4ecdc4;
+        }
+        
+        /* Timeline */
+        .timeline {
+            padding: 80px 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 4px solid #4ecdc4;
+        }
+        
+        .timeline-day {
+            background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            font-weight: 700;
+            min-width: 60px;
+            text-align: center;
+            margin-right: 25px;
+        }
+        
+        .timeline-content h3 {
+            color: #4ecdc4;
+            margin-bottom: 10px;
+        }
+        
+        /* Urgency Section */
+        .urgency {
+            background: linear-gradient(45deg, #ff4757, #ff3838);
+            padding: 60px 0;
+            text-align: center;
+            margin: 80px 0;
+            border-radius: 25px;
+        }
+        
+        .urgency h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .countdown {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 20px 0;
+        }
+        
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .price-container {
+                padding: 25px;
+            }
+            
+            .cta-button {
+                padding: 20px 40px;
+                font-size: 1.1rem;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .timeline-day {
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+        }
+        
+        /* Floating Elements */
+        .floating-phone {
+            position: fixed;
+            top: 20%;
+            right: -100px;
+            font-size: 3rem;
+            animation: float 6s ease-in-out infinite;
+            z-index: 1;
+            opacity: 0.1;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="floating-phone">📱</div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <!-- Logo -->
+            <img class="logo" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSJ0cmFuc3BhcmVudCIvPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfMV8yKSI+CjxwYXRoIGQ9Ik0yNTAgNDEwQzE5NSA0MTAgMTUwIDM2NSAxNTAgMzEwVjIwMEMxNTAgMTQ1IDE5NSAxMDAgMjUwIDEwMFM0NTAgMTQ1IDQ1MCAyMDBWMzEwQzQ1MCAzNjUgNDA1IDQxMCAzNTAgNDEwSDI1MFoiIGZpbGw9IiMyODM2NDgiLz4KPHBhdGggZD0iTTI1MCA5MEMxODkgOTAgMTQwIDE0MSAxNDAgMjAyVjMwOEMxNDAgMzY5IDE4OSA0MjAgMjUwIDQyMFMzNjAgMzY5IDM2MCAzMDhWMjAyQzM2MCAxNDEgMzExIDkwIDI1MCA5MFoiIGZpbGw9IiM0M0E1NDciLz4KPHBhdGggZD0iTTI1MCA4MEM1MCA4MCAyMCA0MCAyMCAyMDBWMzIwQzIwIDQ4MCA1MCA1MjAgMjUwIDUyMFM0ODAgNDgwIDQ4MCAzMjBWMjAwQzQ4MCA0MCA0NTAgODAgMjUwIDgwWiIgZmlsbD0idXJsKCNncmFkaWVudF8xKSIvPgo8cGF0aCBkPSJNMjUwIDIwMEMzMTEgMjAwIDM2MCAyNDkgMzYwIDMxMFYzNTBDMzYwIDQxMSAzMTEgNDYwIDI1MCA0NjBTMTQwIDQxMSAxNDAgMzUwVjMxMEMxNDAgMjQ5IDE4OSAyMDAgMjUwIDIwMFoiIGZpbGw9IiM3OUNEODkiLz4KPHBhdGggZD0iTTI1MCAyMTBMMTYwIDI2MEwyNTAgMzEwTDM0MCAyNjBMMjUwIDIxMFoiIGZpbGw9IiNGRkZGRkYiLz4KPC9nPgo8ZGVmcz4KPGZ5bHRlcjE+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnRfMSIgeDE9IjAuNSIgeTE9IjAiIHgyPSIwLjUiIHkyPSIxIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCI+CjxzdG9wIHN0b3AtY29sb3I9IiM5MzJGRkYiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDMwRkY0Ii8+CjwvbGluZWFyR3JhZGllbnQ+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMV8yIj4KPHJlY3Qgd2lkdGg9IjUwMCIgaGVpZ2h0PSI1MDAiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPHN0eWxlPgo8IVtDREFUQVsKLyogR09PREJZRSAqLwpAbWVkaWEgKG1heC13aWR0aDogNzY4cHgpIHsKICAgIC5sb2dvIHsKICAgICAgICB3aWR0aDogMTUwcHggIWltcG9ydGFudDsKICAgIH0KfQpdXT4KPHN0eWxlPgo8L3N2Zz4K" alt="Goodbye Handy Sucht Logo">
+            
+            <div class="hero-content">
+                <div class="warning-badge">
+                    ⚠️ STOP! Du verschwendest gerade deine Lebenszeit
+                </div>
+                
+                <h1>Handysucht in 7 Tagen besiegen</h1>
+                
+                <p class="subtitle">
+                    Verschwendest du täglich 3-4 Stunden an dein Smartphone?
+                </p>
+                
+                <div class="time-waste">
+                    <span class="time-counter">1.095 Stunden</span>
+                    <p>So viel Lebenszeit verlierst du jährlich durch endloses Scrollen</p>
+                    <p style="opacity: 0.7; margin-top: 10px;">Das sind über 45 ganze Tage pro Jahr! 😱</p>
+                </div>
+                
+                <div class="cta-section">
+                    <div class="price-container">
+                        <span class="price-old">Normalpreis: 99€</span>
+                        <span class="price-new">49€</span>
+                        <span class="savings">50€ gespart!</span>
+                        
+                        <p style="margin-top: 20px; font-size: 1.1rem;">
+                            <strong>🎯 7-Tage-Intensivkurs</strong><br>
+                            <strong>🎧 7 Audio-Module</strong><br>
+                            <strong>📋 Praktische Arbeitsblätter</strong><br>
+                            <strong>⏰ 3 Monate Plattform-Zugang</strong>
+                        </p>
+                    </div>
+                    
+                    <a href="https://sslsites.de/zum-kurs.de?3034&onestep" class="cta-button">
+                        Jetzt deine Lebenszeit zurückgewinnen!
+                    </a>
+                    
+                    <p style="margin-top: 20px; opacity: 0.8;">
+                        💳 Sichere Zahlung | ✅ Sofortiger Zugang nach Zahlung
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Timeline Section -->
+    <section class="timeline">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px;">
+                Deine 7-Tage Transformation
+            </h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-day">Tag 1-2</div>
+                <div class="timeline-content">
+                    <h3>✅ Bewusstsein schaffen</h3>
+                    <p>Du erkennst deine persönlichen Handy-Trigger und verstehst, warum du so oft zum Smartphone greifst.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-day">Tag 3-4</div>
+                <div class="timeline-content">
+                    <h3>✅ Neue Routinen etablieren</h3>
+                    <p>Du findest gesunde Alternativen und baust bewusste Pausen in deinen Alltag ein.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-day">Tag 5-6</div>
+                <div class="timeline-content">
+                    <h3>✅ Digitale Grenzen setzen</h3>
+                    <p>Du lernst Apps zu kontrollieren statt kontrolliert zu werden. Du setzt klare Nutzungszeiten.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-day">Tag 7</div>
+                <div class="timeline-content">
+                    <h3>✅ Langfristige Strategie</h3>
+                    <p>Du entwickelst einen nachhaltigen Plan für dauerhaften Erfolg und echte digitale Freiheit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 30px;">
+                Was du erreichen wirst
+            </h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">⏰</span>
+                    <h3 class="feature-title">Mehr echte Lebenszeit</h3>
+                    <p>Statt 3-4 Stunden täglich am Handy, gewinnst du Zeit für Familie, Hobbys und persönliche Ziele.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">😴</span>
+                    <h3 class="feature-title">Besserer Schlaf</h3>
+                    <p>Schluss mit endlosem Scrollen vor dem Einschlafen. Du genießt erholsame Nächte und mehr Energie am Tag.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🧠</span>
+                    <h3 class="feature-title">Mehr Konzentration</h3>
+                    <p>Du steigerst deine Produktivität und Fokussierung ohne ständige Ablenkung durch Benachrichtigungen.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">💪</span>
+                    <h3 class="feature-title">Kontrolle zurückgewinnen</h3>
+                    <p>Du entscheidest bewusst, wann und wie du dein Handy nutzt - nicht umgekehrt.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">❤️</span>
+                    <h3 class="feature-title">Echte Beziehungen</h3>
+                    <p>Du verbringst mehr qualitative Zeit mit Familie und Freunden statt ständiger Ablenkung durch das Smartphone.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <span class="feature-icon">🎯</span>
+                    <h3 class="feature-title">Persönliche Ziele erreichen</h3>
+                    <p>Du nutzt die gewonnene Zeit für Dinge, die dir wirklich wichtig sind und dich weiterbringen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 30px;">
+                Das sagen unsere Teilnehmer
+            </h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">
+                        Schon nach Tag 3 merkte ich: Ich greife bewusster zum Handy. Nach einer Woche hatte ich abends wieder Zeit für Bücher und meine Familie!
+                    </p>
+                    <p class="testimonial-author">- Sarah M., 34 Jahre</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">
+                        Das System ist so einfach und praxisnah. Keine komplizierten Regeln, sondern kleine, machbare Schritte die wirklich funktionieren.
+                    </p>
+                    <p class="testimonial-author">- Michael K., 28 Jahre</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">
+                        Nach 7 Tagen war meine Screen Time um 60% reduziert. Ich schlafe besser und bin viel produktiver geworden!
+                    </p>
+                    <p class="testimonial-author">- Anna L., 41 Jahre</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Urgency Section -->
+    <section class="urgency">
+        <div class="container">
+            <h2>⏰ Jeden Tag warten = 3-4h verlorene Lebenszeit</h2>
+            <p style="font-size: 1.3rem; margin: 20px 0;">
+                Während du überlegst, verschwendest du weitere wertvolle Stunden deines Lebens.
+            </p>
+            <div class="countdown">
+                🔥 Limitiertes Angebot: 50% Rabatt nur noch heute!
+            </div>
+            
+            <a href="https://sslsites.de/zum-kurs.de?3034&onestep" class="cta-button" style="margin-top: 30px;">
+                Jetzt für 49€ starten (statt 99€)
+            </a>
+        </div>
+    </section>
+    
+    <!-- Final CTA -->
+    <section style="padding: 80px 0; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 30px;">
+                Deine Entscheidung: Weitere 1.095h verschwenden oder jetzt handeln?
+            </h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 40px 0;">
+                <div style="background: rgba(255,71,87,0.1); padding: 30px; border-radius: 15px; border: 1px solid #ff4757;">
+                    <h3 style="color: #ff4757; margin-bottom: 15px;">❌ Ohne Goodbye Handy</h3>
+                    <ul style="text-align: left; opacity: 0.8;">
+                        <li>• 3-4h täglich am Handy verschwenden</li>
+                        <li>• Schlechter Schlaf durch Blue Light</li>
+                        <li>• Weniger Zeit für Familie & Ziele</li>
+                        <li>• Ständige Ablenkung & weniger Produktivität</li>
+                        <li>• Das Gefühl, nicht selbst zu kontrollieren</li>
+                    </ul>
+                </div>
+                
+                <div style="background: rgba(76,217,100,0.1); padding: 30px; border-radius: 15px; border: 1px solid #4cd964;">
+                    <h3 style="color: #4cd964; margin-bottom: 15px;">✅ Mit Goodbye Handy</h3>
+                    <ul style="text-align: left; opacity: 0.8;">
+                        <li>• Bewusste Handy-Nutzung in nur 7 Tagen</li>
+                        <li>• Besserer Schlaf & mehr Energie</li>
+                        <li>• 1.095h Lebenszeit pro Jahr zurückgewinnen</li>
+                        <li>• Höhere Produktivität & Konzentration</li>
+                        <li>• Echte digitale Freiheit & Selbstkontrolle</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="bestellen" style="background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); backdrop-filter: blur(20px); border: 2px solid #4ecdc4; border-radius: 25px; padding: 50px; margin: 50px 0;">
+                <h3 style="font-size: 2rem; margin-bottom: 20px; color: #4ecdc4;">
+                    🎯 Starte jetzt deine 7-Tage Transformation
+                </h3>
+                
+                <div style="font-size: 1.2rem; margin: 30px 0;">
+                    <span style="text-decoration: line-through; opacity: 0.6;">Normalpreis: 99€</span><br>
+                    <span style="font-size: 3rem; font-weight: 900; color: #4ecdc4; display: inline-block; margin: 10px 0;">49€</span><br>
+                    <span style="background: #27ae60; color: white; padding: 8px 16px; border-radius: 20px; font-weight: 600; white-space: nowrap;">50€ gespart!</span>
+                </div>
+                
+                <a href="https://sslsites.de/zum-kurs.de?3034&onestep" class="cta-button" style="font-size: 1.4rem; padding: 25px 60px;">
+                    🚀 Jetzt für 49€ bestellen!
+                </a>
+                
+                <p style="margin-top: 30px; opacity: 0.8;">
+                    ✅ Sofortiger Zugang nach Zahlung<br>
+                    ✅ 7 Audio-Module + Arbeitsblätter<br>
+                    ✅ Sichere Zahlung mit SSL-Verschlüsselung
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all cards and sections
+        document.querySelectorAll('.feature-card, .testimonial, .timeline-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
